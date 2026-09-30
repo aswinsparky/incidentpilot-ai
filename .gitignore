@@ -1,0 +1,29 @@
+# Node & Frontend
+node_modules/
+dist/
+build/
+.vite/
+*.log
+
+# Python & Backend
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+venv/
+env/
+.env
+.env.local
+
+# AWS CDK
+cdk.out/
+.cdk.staging/
+cdk.context.json
+
+# IDE
+.vscode/
+.idea/
+.DS_Store

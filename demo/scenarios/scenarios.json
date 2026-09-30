@@ -1,0 +1,29 @@
+[
+  {
+    "id": "deployment_failure",
+    "name": "Scenario 1: Deployment Failure",
+    "description": "Simulates a release regression in production-api:v42 introducing a memory leak that causes OutOfMemory errors and HTTP 5xx spikes.",
+    "service": "production-api",
+    "expected_cause": "Recent deployment production-api:v42 regression",
+    "expected_action": "rollback_deployment",
+    "confidence": 0.87
+  },
+  {
+    "id": "db_degradation",
+    "name": "Scenario 2: Database Performance Degradation",
+    "description": "Simulates database connection pool exhaustion caused by hanging unindexed queries.",
+    "service": "user-db-cluster",
+    "expected_cause": "Database connection pool exhaustion",
+    "expected_action": "kill_stale_connections",
+    "confidence": 0.91
+  },
+  {
+    "id": "traffic_spike",
+    "name": "Scenario 3: Traffic Spike Capacity Saturation",
+    "description": "Simulates a 300% request volume surge exceeding Auto-Scaling Group capacity quotas.",
+    "service": "checkout-service",
+    "expected_cause": "Compute capacity saturation",
+    "expected_action": "scale_asg_capacity",
+    "confidence": 0.94
+  }
+]
