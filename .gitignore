@@ -4,26 +4,43 @@ dist/
 build/
 .vite/
 *.log
+*.zip
 
-# Python & Backend
+# Python & Backend Lambda Packages
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+*.dist-info/
+*.egg-info/
 .pytest_cache/
 .coverage
 htmlcov/
 venv/
+.venv/
 env/
 .env
 .env.local
 
-# AWS CDK
+# Backend bundled vendor packages
+backend/*
+!backend/app/
+!backend/tests/
+!backend/requirements.txt
+
+# AWS CDK & CLI Deployment Artifacts
 cdk.out/
 .cdk.staging/
 cdk.context.json
+policy.json
+rules.json
+website.json
+deploy_frontend.py
+run_live_tests.py
 
-# IDE
+# IDE & System
 .vscode/
 .idea/
 .DS_Store
+Thumbs.db
+
