@@ -60,5 +60,8 @@ jobs:
       - name: Install CDK Dependencies
         run: cd infrastructure && npm ci
 
+      - name: Build Frontend Assets
+        run: cd frontend && npm ci && npm run build
+
       - name: CDK Synth Synthesis Check
         run: cd infrastructure && npx cdk synth
